@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="files/css/leaflet.css" />
+<link rel="stylesheet" href="files/css/leaflet-search.css" />
+<!--map menu-->
+<link href="files/css/stylesheet.css" rel="stylesheet">
+<!--<link rel="stylesheet" href="https://labs.easyblog.it/maps/leaflet-search/examples/style.css" /> -->
+<style>
+.search-input {
+	font-family:Courier
+}
+.search-input,
+.leaflet-control-search {
+	max-width:400px;
+}
+</style>
+
+  <title>Sodzo Foundation Dashboard</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="files/css/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="files/js/esri-leaflet.js"
+    integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
+    crossorigin=""></script>
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+<!-- menu implementation -->
+
+<nav class="nav"><input type="checkbox" class="nav__cb" id="menu-cb">
+<div class="nav__content">
+<ul class="nav__items">
+<li class="nav__item"><span class="nav__item-text">
+<a href="javascript:m_MONOOn()">Bottles</a></span></li>
+<li class="nav__item"><span class="nav__item-text"><a href="javascript:m_NormalOn()">Pampers</a></span></li>
+<li class="nav__item"><span class="nav__item-text"><a href="javascript:m_ColorOn()">Polythene Bags</a></span></li>
+
+</ul>
+</div>
+
+<label class="nav__btn" for="menu-cb"></label></nav>
+
+
+<!--search map-->
+<script src="files/js/leaflet-search.js"></script>
+
+<script>
+  //var map = L.map('map').setView([37.75, -122.23], 10);
+  
+  var map = L.map('map').setView([0.7558, 33.4384], 6);
+  
+  //remove this not to display wetlands
+  map.addLayer(new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'));	//base layer
+  //this.map = new Map('mapId', {attributionControl: false});
+  map.addControl( new L.Control.Search({
+		url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
+		jsonpParam: 'json_callback',
+		propertyName: 'display_name',
+		propertyLoc: ['lat','lon'],
+		marker: L.circleMarker([0,0],{radius:30}),
+		autoCollapse: true,
+		autoType: false,
+		minLength: 2
+	}) );
+
+  this.map = new Map('mapId', {attributionControl: false});	
+  L.esri.basemapLayer('Topographic').addTo(map);
+  
+</script>
+
+</body>
+
+</html>

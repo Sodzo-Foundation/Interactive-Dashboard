@@ -6,17 +6,38 @@
  */
  
  
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
+#container2 {
+width: 960px; 
+position: relative;
+margin:0 auto;
+line-height: 1.4em;
 }
 
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+@media only screen and (max-width: 479px){
+    #container2 { width: 90%; }
 }
+
+
+ @media only screen and (max-width:1000px){/*if it is 1000px change the font to 12 pt and so on for each resolution you need.*/
+ .centered{font-size:12pt!important;}
+ }
+ @media only screen and (max-width:800px){/*if it is 800px change the font to 11 pt and so on for each resolution you need.*/
+ .centered{font-size:11pt!important;}
+ }
+ @media only screen and (max-width:600px){
+ .centered{font-size:10pt!important;}
+ }
+ @media only screen and (max-width:400px){
+ .centered{font-size:9pt!important;}
+ }
+ @media only screen and (max-width:200px){
+ .centered{font-size:8pt!important;}
+ }
+
+ .centered{ 
+ position: absolute; 
+ width:100%;
+ height:auto;
+ text-align:center;
+ font-size:14pt;
+ }

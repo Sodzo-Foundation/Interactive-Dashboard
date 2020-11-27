@@ -1,5 +1,5 @@
 # Intelligent Real Time Data Visualization Dashboard (The Lawuna Project)
-![N|Solid](https://i.ibb.co/QjCbSry/dasboard.png)
+![N|Solid](https://i.ibb.co/GM4VcnJ/Screenshot-2020-11-27-Sodzo-Foundation-Intelligent-Real-Time-Data-Visualization-Dashboard.png)
 # Intelligent Real Time Data Visualization Dashboard (The Lawuna Project)
 
 This dashboard is meant to be used by sodzo Foundation limited to monitor water pollutants in real time: Pollutants include bottles, polythene bags, pampers and so on.
