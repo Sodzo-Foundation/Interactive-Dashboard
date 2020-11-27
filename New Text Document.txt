@@ -1,3 +1,0 @@
-<h2 id="sidebar-title"><a href="#" style="text-decoration: none;">Bottles</a> </h2>
-<h2 id="sidebar-title"><a href="#" style="text-decoration: none;">Polythene Bags</a> </h2>
-<h2 id="sidebar-title"><a href="#" style="text-decoration: none;">Pampers</a> </h2>
