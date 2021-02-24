@@ -27,10 +27,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+"""
+PUSHER_APP_ID = "1095007"
+PUSHER_KEY = "90b67dc5de6a1b5aa2f3"
+PUSHER_SECRET = "f88842163d1d3c068f4a"
+PUSHER_CLUSTER = "ap2"
+"""
 
 # Application definition
 
 INSTALLED_APPS = [
+    'dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -105,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/Sao_Paulo'
+TIME_ZONE = 'Africa/Nairobi'#'America/Sao_Paulo'
 
 USE_I18N = True
 

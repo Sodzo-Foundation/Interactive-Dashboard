@@ -15,9 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import index
+from .views import index,getcoordinates, update, mapurl, mapupdate #, download
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('update/', update),
+    path('mapurl/', mapurl),
+    path('', getcoordinates),
+    path('mapupdate/', mapupdate),
+    #path('coord/<coord>', getcoordinates),
+    #path('download/', download),
 ]
+    
