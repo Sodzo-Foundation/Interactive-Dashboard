@@ -1,0 +1,1 @@
+define("jquery",[],function(){return jQuery.fn.customerPopup=function(e,t,i,r){e.preventDefault(),t=t||"500",i=i||"400",strResize=r?"yes":"no";var n=void 0!==this.attr("title")?this.attr("title"):"Social Share",s="width="+t+",height="+i+",resizable="+strResize;window.open(this.attr("href"),n,s).focus()},jQuery});

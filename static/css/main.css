@@ -58,7 +58,7 @@
   transition: color 0.5s;
   color: #ff5633; }
   .asylum .color-by-typemode {
-    color: #00d7ed; }
+    color: #e60000; }
     .asylum .color-by-typemode.table__graph span {
       background-color: #00d7ed; }
   .color-by-typemode.table__graph span {
@@ -94,7 +94,8 @@
     fill: #ff5633; }
 
 .fill--red {
-  fill: #ff5633; }
+    fill: #f4f4f4;
+}
 
 @font-face {
   font-family: social;
@@ -1479,7 +1480,7 @@ button.pause:not(.play) {
       height: 100%;
       width: 100%; }
   .carousel-button .lines {
-    opacity: 0;
+    opacity: 1000;
     transition: all 0.6s ease-in-out;
     -webkit-transform-origin: center center;
             transform-origin: center center; }

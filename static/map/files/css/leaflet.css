@@ -1,5 +1,7 @@
 /* required styles */
-
+.star{
+  font-size: 1.5em;
+} 
 .leaflet-pane,
 .leaflet-tile,
 .leaflet-marker-icon,
