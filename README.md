@@ -29,7 +29,7 @@ Then locate http://127.0.0.1:8000/
 
 
 ## License
-[Sodzo Foundation Limited]
+GPL-3.0
 
 ## Actively under development
 
